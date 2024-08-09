@@ -6,8 +6,8 @@ import RoutingComponent from './components/RoutingComponent';
 function App() {
   const [showNavbar, setNavbar] = useState(false);
   const [users, setUser] = useState([
-    { id: 1, username: 'alex', password: '123' },
-    { id: 2, username: 'martha', password: '12345678' },
+    { id: 1, username: 'alex', password: '123', firstname: 'alex', lastname: 'pandian', role: 'admin'},
+    { id: 2, username: 'martha', password: '12345678', firstname: 'martha', lastname: 'kurian', role: 'developer'},
   ]);
 
   const addUser = (user) => {
