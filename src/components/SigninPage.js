@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import Header from './Header'
 
 const SigninPage = ({addUser}) => {
+  const [firstname, setFirstname] = useState('')
+  const [lastname, setLastname] = useState('')
+  const [role, setRole] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [confpassword, setConfPassword] = useState('')
@@ -17,8 +20,11 @@ const SigninPage = ({addUser}) => {
       return
     }
 
-    addUser({ username ,password })
+    addUser({ firstname, lastname, role, username, password })
 
+    setFirstname('')
+    setLastname('')
+    setRole('')
     setUsername('')
     setPassword('')
     setConfPassword('')
@@ -32,9 +38,20 @@ const SigninPage = ({addUser}) => {
 
     <form className='add-form' onSubmit={onSubmit}>
         <div className='form-control'>
-          <label>UserName</label>
+          <label>Firstname</label>
+          <input type='text' placeholder='Firstname' value={firstname} onChange={(e) => setFirstname(e.target.value)} />
+        </div>
+        <div className='form-control'>
+          <label>LastName</label>
+          <input type='text' placeholder='Lastname' value={lastname} onChange={(e) => setLastname(e.target.value)} />
+        </div>
+        <div className='form-control'>
+          <label>Role</label>
+          <input type='text' placeholder='Role' value={role} onChange={(e) => setRole(e.target.value)} />
+        </div>
+        <div className='form-control'>
+          <label>Username</label>
           <input type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} />
-
         </div>
         <div className='form-control'>
           <label>Password</label>

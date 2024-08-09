@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 import Users from './Users';
 import Navbar from './Navbar';
 
-const RoutingComponent = ({ users, addUser, onCheck, onSignOut, showNavbar }) => {
+const RoutingComponent = ({ users, tasks, addUser, onCheck, onSignOut, deleteTask, addTask, showNavbar}) => {
   const navigate = useNavigate();
 
   const handleLoginCheck = (user) => {
@@ -29,7 +29,7 @@ const RoutingComponent = ({ users, addUser, onCheck, onSignOut, showNavbar }) =>
       <Navbar showNavbar={showNavbar} onSignOut={handleSignOut} />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/users" element={<Users users={users} />} />
+        <Route path="/users" element={<Users users={users} tasks={tasks} deleteTask={deleteTask} addTask={addTask}/>} />
         <Route path="/signin" element={<SigninPage addUser={handleAddUser} />} />
         <Route path="/login" element={<LoginPage onCheck={handleLoginCheck} />} />
       </Routes>

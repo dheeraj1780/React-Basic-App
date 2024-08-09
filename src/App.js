@@ -9,6 +9,29 @@ function App() {
     { id: 1, username: 'alex', password: '123', firstname: 'alex', lastname: 'pandian', role: 'admin'},
     { id: 2, username: 'martha', password: '12345678', firstname: 'martha', lastname: 'kurian', role: 'developer'},
   ]);
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      text:'doctor appointment',
+      day: '08/27/2024',
+    },
+    {
+      id: 2,
+      text:'house renovation',
+      day: '10/27/2024',
+    }])
+  
+  
+    //delete task
+    const deleteTask = (id) => {
+      setTasks(tasks.filter((task)=> task.id !== id))
+    }
+  
+    const addTask = (task) => {
+      const id = Math.floor(Math.random()* 10000)+1
+      const newTask = {id, ...task}
+      setTasks([...tasks, newTask])
+    }
 
   const addUser = (user) => {
     const id = Math.floor(Math.random() * 10000) + 1;
@@ -37,9 +60,12 @@ function App() {
     <Router>
       <RoutingComponent
         users={users}
+        tasks={tasks}
         addUser={addUser}
         onCheck={checkUser}
         onSignOut={handleSignOut}
+        deleteTask={deleteTask}
+        addTask={addTask}
         showNavbar={showNavbar}
       />
     </Router>

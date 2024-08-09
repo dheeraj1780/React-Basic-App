@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Tasks from './Tasks';
 
-const Users = ({ users }) => {
+const Users = ({ users,tasks, deleteTask, addTask }) => {
   const [showAddTask, setShowAddTask] = useState(false)
   const [selectedUser, setSelectedUser] = useState(null);
 
@@ -39,7 +39,7 @@ const Users = ({ users }) => {
           </tbody>
         </table>
       ) : (
-        <Tasks user={selectedUser} goBack={handleGoBack} onAdd={()=>setShowAddTask(!showAddTask)} showAdd={showAddTask} />
+        <Tasks user={selectedUser} tasks={tasks} goBack={handleGoBack} onAdd={()=>setShowAddTask(!showAddTask)} showAdd={showAddTask} addTask={addTask} onDelete={deleteTask}/>
       )}
     </div>
   );

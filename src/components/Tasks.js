@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from './Button';
 import AddTask from './AddTask';
+import Task from './Task';
 
-const Tasks = ({ user, goBack, onAdd, showAdd  }) => {
+const Tasks = ({ user,tasks, goBack, onAdd, showAdd, addTask, onDelete  }) => {
 
   return (
     <div className='container'>
@@ -13,7 +14,10 @@ const Tasks = ({ user, goBack, onAdd, showAdd  }) => {
         onClick={onAdd}
       />
       <h4>{user.firstname} {user.lastname}</h4>
-      {showAdd && <AddTask />}
+      {showAdd && <AddTask onAdd={addTask}/>}
+      <>
+    {tasks.map((task) => (<Task key={task.id} task={task} onDelete={onDelete} />))}
+    </>
       <Button onClick={goBack} text='Back'/>
     </div>
   );
