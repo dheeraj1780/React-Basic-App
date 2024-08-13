@@ -3,21 +3,21 @@ import Button from './Button';
 import AddTask from './AddTask';
 import Task from './Task';
 
-const Tasks = ({ user,tasks, goBack, onAdd, showAdd, addTask, onDelete  }) => {
+const Tasks = ({ user, tasks, goBack, onAdd, showAdd, addTask, deleteTask }) => {
+  const userTasks = tasks.filter(task => task.userId === user.id);
 
   return (
     <div className='container'>
-      <h2>Tasks</h2>
+      <h2>Tasks for {user.firstname} {user.lastname}</h2>
       <Button
         color={showAdd ? 'red' : 'green'}
-        text={showAdd ? 'Close' : 'Add Tasks'}
+        text={showAdd ? 'Close' : 'Add Task'}
         onClick={onAdd}
       />
-      <h4>{user.firstname} {user.lastname}</h4>
-      {showAdd && <AddTask onAdd={addTask}/>}
-      <>
-    {tasks.map((task) => (<Task key={task.id} task={task} onDelete={onDelete} />))}
-    </>
+      {showAdd && <AddTask user={user} onAdd={addTask} />}
+      {userTasks.map((task) => (
+        <Task key={task.id} task={task} onDelete={() => deleteTask(user.id, task.id)} />
+      ))}
       <Button onClick={goBack} text='Back'/>
     </div>
   );

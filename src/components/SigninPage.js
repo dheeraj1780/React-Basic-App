@@ -9,6 +9,7 @@ const SigninPage = ({addUser}) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [confpassword, setConfPassword] = useState('')
+  const tasks = []
 
   const navigate = useNavigate(); // Hook for navigation
 
@@ -20,7 +21,7 @@ const SigninPage = ({addUser}) => {
       return
     }
 
-    addUser({ firstname, lastname, role, username, password })
+    addUser({ firstname, lastname, role, username, password, tasks })
 
     setFirstname('')
     setLastname('')

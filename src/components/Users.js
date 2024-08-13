@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Tasks from './Tasks';
+import User from './User';
 
-const Users = ({ users,tasks, deleteTask, addTask }) => {
-  const [showAddTask, setShowAddTask] = useState(false)
+const Users = ({ users, tasks, deleteUser, addTask, deleteTask }) => {
+  const [showAddTask, setShowAddTask] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
 
   const handleUserClick = (user) => {
@@ -14,32 +15,27 @@ const Users = ({ users,tasks, deleteTask, addTask }) => {
     setSelectedUser(null);
   };
 
-  
-
   return (
     <div className='container'>
       <Header title="Users" />
       {!selectedUser ? (
-        <table className='users-table'>
-          <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Role</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user) => (
-              <tr key={user.id} onClick={() => handleUserClick(user)}>
-                <td>{user.firstname}</td>
-                <td>{user.lastname}</td>
-                <td>{user.role}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <>
+          {users.map((user) => (
+            <div key={user.id} onClick={() => handleUserClick(user)}>
+              <User user={user} onDelete={deleteUser}/>
+            </div>
+          ))}
+        </>
       ) : (
-        <Tasks user={selectedUser} tasks={tasks} goBack={handleGoBack} onAdd={()=>setShowAddTask(!showAddTask)} showAdd={showAddTask} addTask={addTask} onDelete={deleteTask}/>
+        <Tasks
+          user={selectedUser}
+          tasks={tasks}
+          goBack={handleGoBack}
+          onAdd={() => setShowAddTask(!showAddTask)}
+          showAdd={showAddTask}
+          addTask={addTask}
+          deleteTask={deleteTask}
+        />
       )}
     </div>
   );

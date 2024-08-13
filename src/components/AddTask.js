@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const AddTask = ({ onAdd }) => {
+const AddTask = ({ user, onAdd }) => {
   const [text, setText] = useState('');
   const [day, setDay] = useState(null);
 
@@ -15,7 +15,7 @@ const AddTask = ({ onAdd }) => {
     }
 
     const formattedDate = day ? day.toLocaleDateString() : null;
-    onAdd({ text, day: formattedDate });
+    onAdd({user} , { text, day: formattedDate });
 
     setText('');
     setDay(null);
