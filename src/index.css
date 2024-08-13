@@ -1,250 +1,250 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-
 /* Global styles */
-* {
-  box-sizing: border-box;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f0f2f5; /* Light gray background for a clean look */
-  color: #333; /* Default text color */
   line-height: 1.6;
 }
 
+/* Container */
 .container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px 30px;
-  background-color: #ffffff; /* White background for contrast */
-  border: 1px solid #dee2e6; /* Light gray border */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* Navbar styling */
+/* Header */
+h2 {
+  font-size: 2em;
+  color: #e0e0e0; /* Light text */
+  text-align: center;
+  padding: 10px;
+  background-color: #1f1f1f; /* Slightly lighter dark background */
+  border-bottom: 2px solid #ff9800; /* Accent color */
+  border-radius: 5px;
+}
+
+/* Navbar */
 .navbar {
-  background-color: #1a202c; /* Dark navy background */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  background-color: #1f1f1f; /* Darker background */
+  overflow: hidden;
+  padding: 10px;
 }
 
 .navbar-links {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  gap: 1.5rem;
+  justify-content: flex-end;
 }
 
 .navbar-links li {
-  list-style: none;
+  margin: 0 10px;
 }
 
-.navbar-links a {
-  color: white;
+.navbar-links li a {
+  display: block;
+  color: #e0e0e0; /* Light text */
+  text-align: center;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.navbar-links li a:hover {
+  background-color: #ff9800; /* Accent color */
+  color: #121212; /* Dark background */
   border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar-links a:hover {
-  background-color: #2d3748; /* Darker gray on hover */
-  transform: translateY(-2px);
-}
-
-/* Highlight active navbar link */
-.navbar-links a.active {
-  background-color: #4a5568; /* Medium gray for the active link */
-  font-weight: 600;
-  border-bottom: 3px solid #319795; /* Teal border to emphasize the active link */
-}
-
-/* Sign Out button styling */
-.signout-btn {
-  background-color: #e53e3e; /* Professional red shade */
-  color: white;
+.btn {
+  background-color: #ff9800; /* Accent color */
+  color: #121212; /* Dark text */
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.signout-btn:hover {
-  background-color: #c53030; /* Slightly darker red */
-  transform: translateY(-2px);
+.btn:hover {
+  background-color: #e68900; /* Darker accent color */
 }
 
-/* Form styling */
+/* Form */
 .add-form {
-  margin-bottom: 40px;
+  background-color: #1f1f1f; /* Dark background */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
 }
 
 .form-control {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .form-control label {
   display: block;
-  font-weight: 500;
   margin-bottom: 5px;
-  color: #4a5568; /* Medium gray for labels */
+  font-weight: bold;
+  color: #ff9800; /* Accent color */
 }
 
 .form-control input {
   width: 100%;
-  height: 40px;
-  padding: 8px 12px;
-  font-size: 16px;
-  border: 1px solid #cbd5e0; /* Light gray for input borders */
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #333;
+  background-color: #333; /* Darker input background */
+  color: #e0e0e0; /* Light text */
   border-radius: 5px;
-  background-color: #edf2f7; /* Light gray for input background */
-  transition: border-color 0.3s ease;
 }
 
-.form-control input:focus {
-  border-color: #3182ce; /* Focus state with blue border */
-  outline: none;
+
+/* User */
+.user {
+  background-color: #2c2c2c; /* Dark gray background */
+  border: 1px solid #444; /* Subtle border for definition */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px; /* Slightly larger radius for smoother corners */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
 }
 
-.form-control-check {
+.user:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow on hover for a lifted effect */
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #e0e0e0; /* Light text */
+}
+
+.user-info p b {
+  color: #ff9800; /* Accent color for labels */
+}
+
+.user-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.form-control-check label {
-  flex: 1;
-  margin-right: 10px;
-  color: #4a5568;
+.user-actions .btn {
+  margin-left: 10px; /* Space between the delete icon and any other actions */
 }
 
-.form-control-check input {
-  flex: 2;
-  height: 20px;
-}
 
-/* Button styling */
-.btn {
-  display: inline-block;
-  background: #3182ce; /* Professional blue */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px 0;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #2b6cb0;
-  transform: translateY(-2px);
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-/* Task item styling */
+/* Tasks */
 .task {
-  background: #edf2f7;
-  margin: 10px 0;
-  padding: 12px 20px;
-  border-radius: 5px;
-  border-left: 5px solid #3182ce;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
+  background-color: #333;
+  border: 1px solid #444;
+  padding: 15px;
+  margin-bottom: 15px; /* Adds space between tasks */
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between; /* Aligns the delete button to the right */
+  align-items: center; /* Centers the content vertically */
+  transition: background-color 0.3s ease;
 }
 
-.task:hover {
-  background-color: #e2e8f0;
-  transform: translateY(-2px);
-}
-
-.task.reminder {
-  border-left-color: #38a169; /* Green border for reminders */
+.add-task-button {
+  margin-top: 20px; /* Adds space above the Add Task button */
 }
 
 .task h3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin: 0;
+  font-size: 1.2em;
+  color: #ff9800; /* Accent color for task title */
 }
 
+.task p {
+  margin: 5px 0;
+  color: #e0e0e0; /* Light text */
+}
 
+.task:hover {
+  background-color: #444; /* Darker background on hover */
+}
 
-/* Table styling */
-.users-table {
+.task button {
+  background-color: transparent;
+  border: none;
+  color: #ff9800; /* Accent color for delete button */
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.task button:hover {
+  color: #e68900; /* Darker accent color on hover */
+}
+
+/* Add Task Form */
+.add-task-form {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Matching shadow for consistency */
+  margin-bottom: 20px;
+}
+
+.add-task-form .form-control {
+  margin-bottom: 15px;
+}
+
+.add-task-form label {
+  display: block;
+  font-size: 1.1em;
+  color: #ff9800; /* Accent color for labels */
+  margin-bottom: 5px;
+}
+
+.add-task-form input[type="text"],
+.add-task-form .react-datepicker-wrapper {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: #e0e0e0;
+  font-size: 1em;
 }
 
-.users-table th, 
-.users-table td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.users-table th {
-  background-color: #1a202c; /* Dark navy background for headers */
+.add-task-form input[type="submit"] {
+  background-color: #ff9800; /* Accent color for submit button */
+  border: none;
   color: white;
-  font-weight: 600;
-  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.users-table tr:nth-child(even) {
-  background-color: #f8f9fa; /* Light gray background for even rows */
-}
-
-.users-table tr:hover {
-  background-color: #e2e8f0; /* Slightly darker gray on hover */
-}
-
-.users-table td {
-  color: #333; /* Consistent text color */
-}
-
-.users-table th:first-child, 
-.users-table td:first-child {
-  border-radius: 8px 0 0 8px; /* Rounded corners for the first column */
-}
-
-.users-table th:last-child, 
-.users-table td:last-child {
-  border-radius: 0 8px 8px 0; /* Rounded corners for the last column */
+.add-task-form input[type="submit"]:hover {
+  background-color: #e68900; /* Darker accent color on hover */
 }
 
 
-
-
-
-/* Footer styling */
+/* Footer */
 footer {
-  margin-top: 30px;
   text-align: center;
-  color: #a0aec0;
-  font-size: 14px;
+  padding: 10px;
+  background-color: #1f1f1f; /* Dark background */
+  color: #ff9800; /* Accent color */
+  margin-top: 20px;
+  border-radius: 5px;
 }

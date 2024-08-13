@@ -27,7 +27,13 @@
       "username": "alex",
       "password": "123",
       "role": "tester",
-      "tasks": []
+      "tasks": [
+        {
+          "id": "1188",
+          "text": "washing clothes",
+          "day": "12/26/2024"
+        }
+      ]
     },
     {
       "id": "3",

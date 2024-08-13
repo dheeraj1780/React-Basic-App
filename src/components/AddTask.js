@@ -22,7 +22,7 @@ const AddTask = ({ user, onAdd }) => {
   };
 
   return (
-    <form className='add-form' onSubmit={onSubmit}>
+    <form className='add-task-form' onSubmit={onSubmit}>
       <div className='form-control'>
         <label>Task</label>
         <input
