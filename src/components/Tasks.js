@@ -14,7 +14,7 @@ const Tasks = ({ user, tasks, goBack, onAdd, showAdd, addTask, deleteTask }) => 
         text={showAdd ? 'Close' : 'Add Task'}
         onClick={onAdd}
       />
-      {showAdd && <AddTask user={user} onAdd={addTask} />}
+      {showAdd && <AddTask user={user.id} onAdd={addTask} />}
       {userTasks.map((task) => (
         <Task key={task.id} task={task} onDelete={() => deleteTask(user.id, task.id)} />
       ))}

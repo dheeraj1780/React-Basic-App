@@ -9,7 +9,7 @@
       "role": "admin",
       "tasks": [
         {
-          "id": 1,
+          "id": "1",
           "text": "Complete project report",
           "day": "08/27/2024"
         },
@@ -36,16 +36,43 @@
       "username": "alicebrown",
       "password": "mypassword",
       "role": "developer",
-      "tasks": []
+      "tasks": [
+        {
+          "id": "1",
+          "text": "Clean room",
+          "day": "11/27/2024"
+        }
+      ]
     },
     {
-      "id": 6165,
+      "id": "6165",
       "firstname": "peter",
       "lastname": "parker",
       "role": "tester",
       "username": "park",
       "password": "123",
-      "tasks": []
+      "tasks": [
+        {
+          "id": "4265",
+          "text": "ticket booking",
+          "day": "9/27/2024"
+        }
+      ]
+    },
+    {
+      "id": "1311",
+      "firstname": "carl",
+      "lastname": "marx",
+      "role": "developer",
+      "username": "carl",
+      "password": "123",
+      "tasks": [
+        {
+          "id": "2881",
+          "text": "sing song",
+          "day": "8/22/2024"
+        }
+      ]
     }
   ]
 }

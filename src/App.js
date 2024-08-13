@@ -7,7 +7,7 @@ function App() {
   const [showNavbar, setNavbar] = useState(false);
   const [users, setUser] = useState([]);
   const [tasks, setTasks] = useState([]);
-
+  console.log(tasks)
   // Fetch users data from the server
   useEffect(() => {
     axios.get('http://localhost:5000/users')
@@ -17,7 +17,6 @@ function App() {
 
         // Extract tasks from users with the "admin" role
         const allTasks = fetchedUsers
-          .filter(user => user.role === 'admin')
           .flatMap(user => user.tasks.map(task => ({ ...task, userId: user.id })));
 
         setTasks(allTasks);
@@ -57,17 +56,17 @@ function App() {
   };
 
 // Add a new task to a specific user
-const addTask = async (userId, task) => {
+const addTask = async (user, task) => {
   const taskId = Math.floor(Math.random() * 10000) + 1;
   const newTask = {
     id: taskId.toString(),
     ...task
   };
-
   try {
-    const response = await axios.post(`http://localhost:5000/users/${userId}/tasks`, newTask);
-    const updatedTasks = [...tasks, { ...response.data, userId }];
-    setTasks(updatedTasks);
+    const response = await axios.post(`http://localhost:5000/users/${user}/tasks`, newTask);
+    const updatedTasks = [...tasks, { ...response.data, user }]
+    console.log(updatedTasks)
+    setTasks(updatedTasks)
   } catch (error) {
     console.error('Error adding task:', error);
   }

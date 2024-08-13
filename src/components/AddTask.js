@@ -15,7 +15,7 @@ const AddTask = ({ user, onAdd }) => {
     }
 
     const formattedDate = day ? day.toLocaleDateString() : null;
-    onAdd({user} , { text, day: formattedDate });
+    onAdd(user , { text, day: formattedDate });
 
     setText('');
     setDay(null);
