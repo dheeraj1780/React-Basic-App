@@ -3,7 +3,7 @@ import Header from './Header';
 import Tasks from './Tasks';
 import User from './User';
 
-const Users = ({ users, tasks, deleteUser, addTask, deleteTask }) => {
+const Users = ({ users, tasks, deleteUser, addTask, deleteTask, session }) => {
   const [showAddTask, setShowAddTask] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
 
@@ -22,7 +22,7 @@ const Users = ({ users, tasks, deleteUser, addTask, deleteTask }) => {
         <>
           {users.map((user) => (
             <div key={user.id} onClick={() => handleUserClick(user)}>
-              <User user={user} onDelete={deleteUser}/>
+              <User user={user} onDelete={deleteUser} session={session}/>
             </div>
           ))}
         </>
@@ -35,6 +35,7 @@ const Users = ({ users, tasks, deleteUser, addTask, deleteTask }) => {
           showAdd={showAddTask}
           addTask={addTask}
           deleteTask={deleteTask}
+          session={session}
         />
       )}
     </div>

@@ -3,7 +3,7 @@ import Button from './Button';
 import AddTask from './AddTask';
 import Task from './Task';
 
-const Tasks = ({ user, tasks, goBack, onAdd, showAdd, addTask, deleteTask }) => {
+const Tasks = ({ user, tasks, goBack, onAdd, showAdd, addTask, deleteTask, session }) => {
   const userTasks = tasks.filter(task => task.userId === user.id);
 
   return (
@@ -18,9 +18,9 @@ const Tasks = ({ user, tasks, goBack, onAdd, showAdd, addTask, deleteTask }) => 
       {userTasks?.length
       ?(
         <>
-        {userTasks.map((task) => (
-          <Task key={task.id} task={task} onDelete={() => deleteTask(user.id, task.id)} />
-        ))}
+      {userTasks.map((task) => (
+        <Task key={task.id} task={task} onDelete={() => deleteTask(user.id, task.id)} session={session}  />
+      ))}
         </>
       ):<p>No tasks assigned</p>
       }

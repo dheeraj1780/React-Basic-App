@@ -9,7 +9,7 @@ const Navbar = ({ onSignOut, showNavbar }) => {
       <ul className="navbar-links">
         {showNavbar ? (
           <>
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/home">Home</Link></li>
             <li><Link to="/users">Users</Link></li>
           </>
         ) : (

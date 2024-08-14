@@ -9,14 +9,9 @@
       "role": "admin",
       "tasks": [
         {
-          "id": "1",
-          "text": "Complete project report",
-          "day": "08/27/2024"
-        },
-        {
-          "id": "2",
-          "text": "Schedule team meeting",
-          "day": "11/27/2024"
+          "id": "9288",
+          "text": "play piano",
+          "day": "8/20/2024"
         }
       ]
     },
@@ -27,13 +22,7 @@
       "username": "alex",
       "password": "123",
       "role": "tester",
-      "tasks": [
-        {
-          "id": "1188",
-          "text": "washing clothes",
-          "day": "12/26/2024"
-        }
-      ]
+      "tasks": []
     },
     {
       "id": "3",
@@ -72,13 +61,7 @@
       "role": "developer",
       "username": "carl",
       "password": "123",
-      "tasks": [
-        {
-          "id": "2881",
-          "text": "sing song",
-          "day": "8/22/2024"
-        }
-      ]
+      "tasks": []
     },
     {
       "id": "8739",
@@ -96,13 +79,7 @@
       "role": "admin",
       "username": "vk",
       "password": "123",
-      "tasks": [
-        {
-          "id": "5566",
-          "text": "play cricket",
-          "day": "8/26/2024"
-        }
-      ]
+      "tasks": []
     }
   ]
 }
