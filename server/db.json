@@ -79,6 +79,30 @@
           "day": "8/22/2024"
         }
       ]
+    },
+    {
+      "id": "8739",
+      "firstname": "donald",
+      "lastname": "duck",
+      "role": "tester",
+      "username": "duck",
+      "password": "123",
+      "tasks": []
+    },
+    {
+      "id": "1747",
+      "firstname": "virat",
+      "lastname": "kohli",
+      "role": "admin",
+      "username": "vk",
+      "password": "123",
+      "tasks": [
+        {
+          "id": "5566",
+          "text": "play cricket",
+          "day": "8/26/2024"
+        }
+      ]
     }
   ]
 }

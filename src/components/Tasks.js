@@ -15,9 +15,15 @@ const Tasks = ({ user, tasks, goBack, onAdd, showAdd, addTask, deleteTask }) => 
         onClick={onAdd}
       />
       {showAdd && <AddTask user={user.id} onAdd={addTask} />}
-      {userTasks.map((task) => (
-        <Task key={task.id} task={task} onDelete={() => deleteTask(user.id, task.id)} />
-      ))}
+      {userTasks?.length
+      ?(
+        <>
+        {userTasks.map((task) => (
+          <Task key={task.id} task={task} onDelete={() => deleteTask(user.id, task.id)} />
+        ))}
+        </>
+      ):<p>No tasks assigned</p>
+      }
       <Button onClick={goBack} text='Back'/>
     </div>
   );

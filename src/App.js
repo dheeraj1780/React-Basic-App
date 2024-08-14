@@ -29,7 +29,7 @@ function App() {
   // Add a new user and persist to server
   const addUser = async (user) => {
     const id = Math.floor(Math.random() * 10000) + 1;
-    const newUser = { id, ...user };
+    const newUser = { id:id.toString(), ...user };
 
     try {
       const response = await axios.post('http://localhost:5000/users', newUser);
