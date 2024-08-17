@@ -29,29 +29,28 @@ This project is a simple web application built using React and Express, designed
    cd React-Basic-App
 Install frontend dependencies:
 
-bash
-Copy code
-npm install
+  ```bash
+    npm install
+
 Start the frontend:
 
-bash
-Copy code
-npm start
+  ```bash
+  npm start
+
 Navigate to the backend folder:
 
-bash
-Copy code
-cd backend
+  ```bash
+  cd backend
+
 Install backend dependencies:
 
-bash
-Copy code
-npm install
+  ```bash
+  npm install
 Start the backend server:
 
-bash
-Copy code
-node server.js
+  ```bash
+  node server.js
+
 Open the app:
 Visit http://localhost:3000 in your browser.
 
