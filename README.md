@@ -27,31 +27,34 @@ This project is a simple web application built using React and Express, designed
    ```bash
    git clone https://github.com/yourusername/React-Basic-App.git
    cd React-Basic-App
-Install frontend dependencies:
+   ```
+2. Install frontend dependencies:
 
   ```bash
     npm install
-
-Start the frontend:
+  ```
+3. Start the frontend:
 
   ```bash
   npm start
-
-Navigate to the backend folder:
+  ```
+4. Navigate to the backend folder:
 
   ```bash
   cd backend
-
-Install backend dependencies:
+  ```
+5. Install backend dependencies:
 
   ```bash
   npm install
-Start the backend server:
+  ```
+6. Start the backend server:
 
   ```bash
   node server.js
+  ```
 
-Open the app:
+7. Open the app:
 Visit http://localhost:3000 in your browser.
 
 ## Contributing
